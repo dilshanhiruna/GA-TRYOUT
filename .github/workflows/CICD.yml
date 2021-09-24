@@ -34,7 +34,7 @@ jobs:
     steps:
       - name: unit test
         run: ./unittest test
-  
+
   sonarqube:
     runs-on: ubuntu-latest
     needs: [test]

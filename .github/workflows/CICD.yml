@@ -6,7 +6,7 @@ on:
       - main
   pull_request:
     types: [opened, synchronize, reopened]
-name: CICD
+name: CI-CD
 
   workflow_dispatch:
      # Inputs the workflow accepts.

@@ -1,12 +1,16 @@
 on:
   # Trigger analysis when pushing in master or pull requests, and when creating
   # a pull request.
+
   workflow_dispatch:
-    push:
-    branches:
-      - master
-    pull_request:
-      types: [opened, synchronize, reopened]
+      inputs:
+        name: CICD
+          description: 'Shopyfik Prod'
+          required: true
+        home:
+          description: 'Super-Linter'
+          required: false
+
 
 jobs:
   build:
@@ -56,3 +60,4 @@ jobs:
         timeout-minutes: 5
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+

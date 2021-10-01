@@ -4,7 +4,6 @@ on:
   workflow_dispatch:
 
 jobs:
-
   build:
     runs-on: ubuntu-latest
 
@@ -52,10 +51,3 @@ jobs:
         timeout-minutes: 5
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-          
-   ShopyfikProd:
-      name: Shopyfik Prod
-      runs-on: ubuntu-latest
-      environment:
-        name: Deploy to Prod
-        url: 

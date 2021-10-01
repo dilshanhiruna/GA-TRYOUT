@@ -1,9 +1,0 @@
-   name: Shopyfik Prod
-
-jobs:
-   ShopyfikProd:
-      name: Shopyfik Prod
-      runs-on: ubuntu-latest
-      environment:
-        name: Deploy to Prod
-        url: 

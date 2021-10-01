@@ -56,15 +56,3 @@ jobs:
         timeout-minutes: 5
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-
-   ShopyfikProd:
-    name: Shopyfik Prod
-    runs-on: ubuntu-latest
-    needs: [sonarqube]
-    environment:
-      name: Deploy to Prod
-      url: 
-    steps:
-    # Checkout
-    - name: Checkout
-      uses: actions/checkout@v1
